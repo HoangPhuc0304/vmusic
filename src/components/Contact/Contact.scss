@@ -1,0 +1,139 @@
+@import '../../common/config.scss';
+
+#contact {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 0 7rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    background-color: #fff;
+    display: block;
+}
+.contact-heading {
+    text-align: center;
+    color: #000;
+    font-size: $font-heading; 
+    font-weight: 700;
+    text-shadow: 0 0 1px #fff;
+}
+.contact-box {
+    margin-top: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-information {
+    width: 100%;
+}
+.contact-information-item {
+    width: 100%;
+    padding: 4px 0;
+}
+.contact-icon {
+    font-size: 1.25rem;
+    margin-right: 4px;
+}
+.green-color {
+    color: rgb(0, 88, 0);
+    -webkit-text-stroke: 1px;
+}
+.black-color {
+    color: rgba(0, 0, 0, 0.76);
+    -webkit-text-stroke: 1px;
+}
+.red-color {
+    color: rgb(151, 1, 1);
+    -webkit-text-stroke: 1px;
+}
+.contact-text {
+    font-size: $font-text;
+    font-weight: 500;
+}
+#form-contact {
+    margin: 0 auto; 
+}
+
+.form-contact-list {
+    margin-bottom: 3rem;
+
+    &:nth-child(1) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-contact-item {
+    width: 100%;
+    position: relative;
+}
+.form-contact-icon {
+    font-size: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.5rem;
+    color: $dark-color;
+}
+.contact-title, 
+.contact-title-message {
+    position: absolute;
+    left: 36px;
+    padding: 4px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $dark-color;
+    pointer-events: none;
+    z-index: 1;
+    transition: 0.3s;
+    width: 80%;
+    background-color: #fff;
+}
+.contact-input {
+    width: 80%;
+    padding: 0.5rem;   
+    border-radius: 3px;
+    color: #333;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #777;
+    font-size: $font-text;
+}
+.contact-input:focus ~ .contact-title,
+.contact-input-message:focus ~ .contact-title-message {
+    transform: translateY(-20px);
+    font-size: $font-text;
+    font-weight: 500;
+}
+.contact-input:invalid ~ .contact-title,
+.contact-input-message:invalid ~ .contact-title-message {
+    transform: translateY(-20px);
+    font-size: $font-text;
+    font-weight: 500;
+}
+.contact-input-message {
+    width: 90%;
+    padding: 0.5rem;   
+    border-radius: 3px;
+    color: #333;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #777;
+}
+.contact-btn {
+    margin-left: 76%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3px;
+    border: none;
+    background-color: $dark-color;
+    color: #fff;
+    cursor: pointer;
+}
+.form-contact-item.invalid .contact-input {
+    border-color: #f33a58;
+}
+.form-contact-item.invalid .form-message {
+    color: #f33a58;
+    font-size: 0.75rem;
+}
+.form-contact-item .form-message {
+    margin-left: 2.25rem;
+}

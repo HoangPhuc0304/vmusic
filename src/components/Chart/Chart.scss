@@ -1,0 +1,355 @@
+@import '../../common/config.scss';
+
+.chart {
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    padding-top: 3rem;
+    @include animation(fadeLeft,ease,1s);
+
+    &-body {
+        margin: 0 24px;
+        flex-shrink: 1;
+        flex-direction: column;
+        overflow: auto;
+        overscroll-behavior: contain;
+        scroll-behavior: smooth;
+        justify-content: flex-start;
+        will-change: scroll-position;
+        height: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .chart-heading {
+        text-align: center;
+        font-size: $font-heading;
+        text-shadow: 0 0 4px #000;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 3rem;
+    }
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    grid-gap: 2rem;
+    row-gap: 4rem;
+    width: 100%;
+    margin-bottom: 8rem;
+    
+    z-index: 2;
+
+   .chart-background {
+        position: relative;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        margin: 0 2%;
+        box-shadow: 5px 10px 18px rgb(0 0 0 / 60%);
+
+        &-top {
+            position: relative;
+            height: 70%;
+            width: auto;
+            border-radius: 3px;
+        }
+        &-photo {
+            height: 100%;
+            width: 100%;
+            border-radius: 3px;
+            @include transition-ease;
+            object-fit: cover;
+        }
+        &-page {
+            position: absolute;
+            left: 6px;
+            top: 2px;
+            color: #fff;
+            font-size: 0.8rem;
+            margin: 4px 6px;
+            padding: 6px 8px;
+            text-shadow: 0 0 2px #000;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        &-left {
+            position: absolute;
+            left: 0.5rem;
+            top: 40%;
+            padding: 1rem 0.6rem;
+            font-weight: bold;
+            -webkit-text-stroke: 1px;
+            color: #fff;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 3px;
+            }
+        }
+        &-right {
+            position: absolute;
+            right: 0.5rem;
+            top: 40%;
+            padding: 1rem 0.6rem;
+            font-weight: bold;
+            -webkit-text-stroke: 1px;
+            color: #fff;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 3px;
+            }
+        }
+
+        &-bottom {
+            position: absolute;
+            height: 29%;
+            top: 71%;
+            left: 0;
+            right: 0;
+            overflow: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            background-color: #fff;
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        &-box {
+            display: inline-block;
+            height: 100%;
+            width: auto;
+            border-radius: 3px;
+            vertical-align:top;
+            border: none;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 3px;
+                background-position: center;
+                background-size: cover;
+                padding: 0.2rem 0.3rem;
+                object-fit: cover;
+                transition: all 0.2s linear;
+                overflow: hidden;
+
+                &:hover {
+                    opacity: 0.8;
+                    transform: scale(1.05);
+                    overflow: hidden;
+                }
+            }
+        }
+
+    }
+
+    .chart-song {
+        height: 500px;
+        border-radius: 4px;
+        background-color: #fff;
+        border-color: rgba(0,0,0,0.1);
+        border-style: solid;
+        border-width: 1px;
+        margin: 0 2%;
+        box-shadow: 5px 10px 18px rgb(0 0 0 / 60%);
+
+        .chart-title {
+            width: 100%;
+            height: 60px;
+            font-size: 1.2rem;
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-color);
+            font-weight: 600;
+            text-shadow: 0 0 1px #000;
+
+            &-heading {
+                padding: 0 0.75rem;
+            }
+
+            &-time {
+                padding: 0 0.75rem;
+            }
+        }
+        .chart-list {
+            width: 100%;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+        .chart-item {
+            margin: 0.25rem 0;
+            height: 3.5rem;
+            display: flex;
+            .chart-number {
+                margin: auto 0.25rem auto 0.25rem;
+                font-size: 0.75rem;
+                font-weight: 600;
+                color: rgba(0,0,0,0.8);
+                width: 2rem;
+                height: 1.75rem;
+                background-color: rgba(214, 0, 23, 0.25);
+                border-radius: 50%;
+                @include flex-center-display;
+
+                &.green {
+                    color: green;
+                }
+                &.blue {
+                    color: blue;
+                }
+                &.red {
+                    color: red;
+                }
+            }
+            .chart-btn {
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                border: none;
+                text-decoration: none;
+                border-radius: 4px;
+                cursor: pointer;
+                display: flex;
+                transition: all 0.3s ease;
+                &:hover {
+                    background-color: #d60017;
+                }
+                &:hover .chart-decoration h3 {
+                    color: #fff;
+                    font-weight: 720;
+                    text-shadow: 0 0 1px #000;
+                }
+                &:hover .chart-decoration p {
+                    color: rgba(255,255,255,0.7);
+                    font-weight: 400;
+                    text-shadow: 0 0 1px #000;
+                }
+
+                img {
+                    height: 84%;
+                    width: auto;
+                    background-color: rgba(0,0,0,0.7);
+                    background-size: cover;
+                    background-position: center;
+                    margin: auto 0.25rem;
+                    border-radius: 4px;
+                }
+
+                .chart-decoration {
+                    width: 100%;
+                    height: 84%;
+                    margin: auto 2px auto 0;
+                    float: left;
+                    h3 {
+                        font-size: $font-text;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        color: var(--primary-color);
+                        overflow: hidden;
+                        font-weight: 600;
+                        text-shadow: 0 0 1px #fff;
+                        width: 100%;
+                        text-align: left;
+                        padding: 2px 0;
+                    }
+                    p {
+                        width: 100%;
+                        font-size: 12px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        font-weight: 400;
+                        text-shadow: 0 0 1px #fff;
+                        color: rgba(0,0,0,0.7);
+                        text-align: left;
+
+                        &::before {
+                            content: "Song · ";
+                        }
+                    }
+                }
+            }
+            .chart-status {
+                margin: auto 2px;
+                font-size: 12px;
+                -webkit-text-stroke: 1px;
+                color: #878787;
+
+                &.green {
+                    color: #169b45;
+                }
+                &.red {
+                    color: #e91429;
+                }
+            }
+            
+        }
+        
+        .chart-footer {
+            width: 100%;
+            margin: 2rem auto;
+            font-size: $font-text;
+            .chart-more {
+                text-decoration: none;
+                color: rgba(0,0,0,0.7);
+                @include flex-center-display;
+            }
+        }
+    }
+}
+
+.chart-clouds {
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(transparent,rgb(62, 126, 223) 10%);
+    overflow: hidden;
+}
+.chart-cloud-item {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+
+    &:nth-child(1) {
+        animation: animateCloud 200s linear infinite;
+    }
+    &:nth-child(2) {
+        animation: animateCloud 150s linear infinite;
+    }
+    &:nth-child(3) {
+        animation: animateCloud 100s linear infinite;
+    }
+    &:nth-child(4) {
+        animation: animateCloud 75s linear infinite;
+    }
+    &:nth-child(5) {
+        animation: animateCloud 50s linear infinite;
+    }
+
+    @keyframes animateCloud {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+}
+
+

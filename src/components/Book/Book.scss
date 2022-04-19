@@ -1,0 +1,37 @@
+@import '../../common/config.scss';
+
+#book {
+    width: 100%;
+    .book-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: $primary-color;
+        padding: 4rem 0 7rem;
+        padding-left: 16%;
+        padding-right: 16%;
+    }
+    .book-heading {
+        text-align: center;
+        font-size: $font-heading;
+        color: $text-color;
+        font-weight: 600;
+        text-shadow: 0 0 1px #000;
+    }
+    .book-frame {
+        width: 100%;
+        margin-top: 3rem;
+        @include transition-ease;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 320px;
+            padding: 0 0.5rem;
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            border-radius: 4px;
+        }
+    }
+}

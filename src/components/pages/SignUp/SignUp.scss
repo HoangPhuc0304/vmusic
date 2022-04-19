@@ -1,0 +1,165 @@
+@import '../../../common/config.scss';
+
+.modal-sign-up {
+    position: relative;
+    margin-top: 46px;
+    width: 100%;
+    height: calc(100vh - 46px);
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    #form-signUp
+    {
+        position: relative;
+        background-color: #fff;
+        width: 400px;
+        max-width: calc(100vw - 32px);
+        border-radius: 4px;
+        // animation: FadeIn ease-in 0.5s;
+        @include animation(FadeIn,ease-in,0.3s) ;
+        align-self: center;
+        max-height: calc(100vh - 32px);
+        flex-shrink: 1;
+        flex-direction: column;
+        overflow: auto;
+        overscroll-behavior: contain;
+        scroll-behavior: smooth;
+        justify-content: flex-start;
+        will-change: scroll-position;
+    }
+    .form-header {
+        position: relative;
+        height: 96px;
+        background-color: $dark-color;
+        @include flex-center-display;
+        border-radius: 2px 2px 0 0;
+    }
+    .form-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 12px;
+        color: $text-color;
+        text-decoration: none;
+    }
+    .form-close:hover {
+        color: $dark-color;
+        background-color: $text-color;
+        cursor: pointer;
+    }
+    .form-heading {
+        color:$text-color;
+        font-size: $font-heading;
+    }
+    .social-size {
+        width: 22px;
+        height: 22px;
+        margin: 0 4px;
+    }
+    .social-fb {
+        background-size: 325% 287.5%;
+        background-position: 5.555555555555555% 62.666666666666664%;
+    }
+    .social-google {
+        background-size: 722.2222222222222% 638.8888888888889%;
+        background-position: 83.92857142857143% 5.154639175257732%;
+    }
+    .social-apple {
+        background-size: 406.25% 359.375%;
+        background-position: 5.1020408163265305% 6.024096385542169%;
+    }
+    .social-background {
+        background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7b95007f3377150730bbb5d1ddb477d6.png);
+    }
+    .form-body {
+        width: 100%;
+        padding: 8px 16px;
+    }
+    .form-group {
+        width: 100%;
+        padding: 4px 0;
+    }
+    .form-group.invalid .form-control-input {
+        border-color: #f33a58;;
+    }
+    .form-group.invalid .form-message {
+        color: #f33a58;;
+    }
+    .form-user-icon {
+        font-size: 20px;
+    }
+    .form-label {
+        font-size: 14px;
+    }
+    .form-control-input {
+        display: block;
+        width: 100%;
+        padding: 8px 8px;
+        font-size: 14px;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid #b3b3b3;
+    }
+    .form-control-input:hover {
+        border-color: $primary-color;
+    }
+    .form-message {
+        padding: 4px 2px;
+        font-size: 12px;
+        width: 100%;
+        height: 20px;
+    }
+
+    .forget-password-box {
+        width: 100%;
+        text-align: right;
+    }
+    .forget-password {
+        font-size: 14px;
+        color: $primary-color;
+        text-decoration: none;
+    }
+    .form-footer {
+        margin: 4px 0;
+    }
+    .form-submit {
+        width: 50%;
+        height: 36px;
+        margin: 4px 25%;
+        background-color: $dark-color;
+        color: $text-color;
+        cursor: pointer;
+        border-radius: 80px;
+        border: none;
+    }
+    .form-social {
+        padding: 18px 0 4px 0;
+    }
+    .form-suggest {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+    .form-social-icon {
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .change-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+        font-size: 14px;
+    }
+    .change-signUp {
+        margin: 0 4px;
+        color: $primary-color;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,120 @@
+@import '../../common/config.scss';
+
+.singer {
+    height: 100%;
+    @include animation(fadeLeft,ease,1s);
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    
+    &-body {
+        margin: 0 24px;
+        flex-shrink: 1;
+        flex-direction: column;
+        overflow: auto;
+        overscroll-behavior: contain;
+        scroll-behavior: smooth;
+        justify-content: flex-start;
+        will-change: scroll-position;
+        height: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .singer-heading {
+        text-align: center;
+        font-size: $font-heading;
+        text-shadow: 0 0 4px var(--text-change);
+        font-weight: 700;
+        color: var(--text-color);
+    }
+    .singer-container {
+        margin-top: 3rem;
+
+        .singer-list {
+            margin-top: 3rem;
+            padding: 0 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(196px,1fr));
+            grid-gap: 3rem;
+        }
+        .singer-item {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            // height: auto;
+            background-color: var(--text-color);
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 4px 20px 40px rgba(0,0,0,0.6);
+            list-style-type: none;
+
+            &:hover .singer-photo {
+                width: 96%;
+                transform: rotateY(-180deg);
+                overflow: auto;
+                border-radius: 4px;
+            }
+            .singer-photo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                width: calc(100% + 2px);
+                height: 100%;
+                background-position: center;
+                transform-style: preserve-3d;
+                transform-origin: left;
+                transition: 1.5s;
+            }
+            .singer-info {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                transform-style: preserve-3d;
+                transform: perspective(1000px);
+                border-bottom: 10px solid #d60017;
+            }
+            .singer-name {
+                padding-top: 2rem;
+                color: #000;
+                font-weight: 700;
+                font-size: 1.4rem;
+            }
+            .singer-sub {
+                padding: 1.5rem 0;
+                font-size: 0.8rem;
+                color: #f53f27;
+                font-weight: 650;
+            }
+            .singer-social {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                padding: 2.2rem 0;
+                text-decoration: none;
+                font-size: $font-normal;
+                transition: 0.2s;
+            }
+            .singer-fb,
+            .singer-youtube,
+            .singer-instagram,
+            .singer-spotify {
+                border-radius: 3px;
+                padding: 0.5rem;
+                margin: 5px;
+                background-color: #333;
+                color: var(--text-color);
+
+                &:hover {
+                    background-color: #d60017;
+                    transform: scale(1.2);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

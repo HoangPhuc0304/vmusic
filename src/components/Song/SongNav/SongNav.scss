@@ -1,0 +1,201 @@
+@import '../../../common/config.scss';
+
+.song-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-color);
+    width: calc(100vw / 5);
+    height: 100vh;
+    z-index: 5;
+    user-select: none;
+    .song-logo {
+        width: 100%;
+        display: flex;
+        height: 4.5rem;
+        img {
+            height: 3rem;
+            margin: auto 0;
+            padding: 0 4px;
+        }
+        h3 {
+            font-size: $font-heading;
+            color: var(--text-color);
+            margin: auto 0;
+            padding: 0 0.5rem;
+        }
+    }
+    
+}
+
+.song-nav-header {
+    width: 100%;
+    background-color: var(--dark-color);
+}
+.song-nav-item {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--dark-color);
+    padding: 0.6rem 0;
+    color: var(--text-color); 
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid var(var(--dark-color));
+
+    &.active {
+        background-color: #ffffff1a;
+        border-left: 3px solid #ed2b91;
+    }
+
+    i {
+        float:left;
+        margin-left: 10%;
+        font-size: 1rem;
+    }
+
+    .song-nav-name {
+        float:left;
+        margin-left: 5%;
+        font-size: 0.75rem;
+
+        &:hover {
+            opacity: 0.8;
+            transition: all 0.1s ease;
+        }
+    }
+    .song-nav-description {
+        float:left;
+        font-size: 0.6rem;
+        font-weight: 300;
+        padding: 2px 4px;
+        background-color: red;
+        margin-left: 5%;
+        border-radius: 4px;
+    }
+}
+.song-nav-body {
+    width: 100%;
+    background-color: var(--dark-color);
+    margin-top: 0.75rem;
+    height: 30%;
+    flex-shrink: 1;
+    flex-direction: column;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+    justify-content: flex-start;
+    will-change: scroll-position;
+    .song-nav-line {
+        margin: 0.5rem auto;
+        height: 1px;
+        width: 80%;
+        background-color: rgb(192, 192, 192);
+    }
+    .song-nav-notice {
+        background-image: linear-gradient(117deg,#5a4be7,#c86dd7 102%);
+        margin: 0.5rem 10%;
+        padding: 1rem 0.75rem;
+        border-radius: 6px;
+
+        p {
+            color: var(--text-color);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        button {
+            background-color: #f8e71c;
+            display: flex;
+            padding: 0.4rem 2rem;
+            margin: 0.5rem auto;
+            border: none;
+            border-radius: 40px;
+            font-size: $font-text;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+    .song-nav-library {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .song-nav-library-frame {
+        width: 100%;
+        border: none;
+        background-color: var(--dark-color);
+        padding: 0.6rem 0;
+        color: var(--text-color); 
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        border-left: 3px solid var(--dark-color);
+
+        h3 {
+            font-size: $font-text;
+            float:left;
+            margin-left: 8%;
+        }
+        i {
+            font-size: $font-text;
+            float: right;
+            margin-left: 50%;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .song-nav-library-item {
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        background-color: var(--dark-color);
+        padding: 0.4rem 0;
+        color: var(--text-color); 
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        border-left: 3px solid var(--dark-color);
+
+        svg {
+            float:left;
+            margin-left: 10%;
+        }
+
+        span {
+            float:left;
+            margin-left: 5%;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.song-nav-create {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--dark-color);
+    padding: 0.6rem 0;
+    color: var(--text-color); 
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid var(--dark-color);
+    border-top: 1px solid rgb(192, 192, 192);
+    border-bottom: 1px solid rgb(192, 192, 192);
+
+    i {
+        float:left;
+        margin-left: 10%;
+        font-size: 1.25rem;
+    }
+    span {
+        float:left;
+        margin-left: 5%;
+        font-size: $font-text;
+    }
+}

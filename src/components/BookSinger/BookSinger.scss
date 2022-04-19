@@ -1,0 +1,145 @@
+@import '../../common/config.scss';
+
+.book-background {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 4;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    &-box {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        
+        &.background-night {
+            background: linear-gradient(#2b1055,#7597de);
+        }
+        &.background-sunset {
+            background: linear-gradient(#ec4c23,#c0395a);
+        }
+        &.background-dawn {
+            background: linear-gradient(#e4b20d,#7597de);
+        }
+
+        .book-night-star {
+            position: absolute;
+            width: 100%;
+            object-fit: cover;
+            top: 0;
+            height: 100%;
+            @include animation(fadeDown,ease,1s);
+            display: none;
+        }
+        .book-moon {
+            position: absolute;
+            width: 100%;
+            mix-blend-mode: screen;
+            top: 0;
+            left: 0;
+            @include animation(fadeDown,ease,1s);
+            display: none;
+        }
+        .book-mountain {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            top: initial;
+            @include animation(fadeUp,ease,1s);
+            display: none;
+        }
+        .book-valley {
+            position: absolute;
+            width: 100%;
+            /* bottom: -100%; */
+            bottom: 0;
+            top: initial;
+            @include animation(fadeUp,ease,1s);
+            display: none;
+        }
+    }
+    &-singer {
+        position: absolute;
+        top: 36%;
+        left: 45.5%;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        width: 10%;
+        height: auto;
+        border-radius: 10px;
+        @include animation(fadeDown,ease,1s);
+        display: none;
+        overflow: hidden;
+        box-shadow: 10px 20px 30px rgba(0,0,0,0.6);
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+    &-shadow {
+        position: absolute;
+        top: 0;
+        left: 150%;
+        width: 50%;
+        height: 100%;
+        background: rgba(255,255,255,0.4);
+        border-radius: 10px;
+        @include animation(fadeSlide,ease,0.5s);
+        z-index: 1;
+        display: none;
+    }
+    &-click {
+        position: absolute;
+        left: calc(50% - 60px);
+        top: 200px;
+        padding: 8px 32px;
+        width: 120px;
+        height: 40px;
+        border: none;
+        border-radius: 40px;
+        color: #fff;
+        font-size: $font-text;
+        font-weight: 550;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        box-shadow: 4px 10px 20px rgba(0,0,0,0.6);
+
+        &.color-night {
+            background-color: #8542f1;
+        }
+        &.color-sunset {
+            background-color: #ee1009;
+        }
+        &.color-dawn {
+            background-color: #71d131;
+        }
+
+        &.hiding {
+            @include animation(HiddenDown,ease,0.5s);
+        }
+
+    }
+    &-exit {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        padding: 16px 16px;
+        -webkit-text-stroke: 1px;
+        color: #fff;
+
+        &:hover {
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.4);
+            cursor: pointer;
+        }
+    }
+}

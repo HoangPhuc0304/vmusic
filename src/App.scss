@@ -1,0 +1,59 @@
+* {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #999;
+        border-radius: 20px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #777;
+    }
+    &::-webkit-scrollbar-thumb:active {
+        background-color: #444;
+    }
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+@import './components/Header/Header.scss';
+@import './components/Content/Content.scss';
+@import './components/Footer/Footer.scss';
+@import './components/Slider/Slider.scss';
+@import './common/config.scss';
+@import './components/pages/SignIn/SignIn.scss';
+@import './components/pages/SignUp/SignUp.scss';
+@import './components/Singer/Singer.scss';
+@import './components/Chart/Chart.scss';
+@import './components/Book/Book.scss';
+@import './components/BookList/BookList.scss';
+@import './components/BookSinger/BookSinger.scss';
+@import './components/Contact/Contact.scss';
+@import './components/Footer/Footer.scss';
+@import './components/Song/Song.scss';
+@import './components/Song/SongNav/SongNav.scss';
+@import './components/Song/SongFollow/SongFollow.scss';
+@import './components/Song/SongLibary/SongLibrary.scss';
+@import './components/Song/SongMV/SongMV.scss';
+@import './components/Song/SongChart/SongChart.scss';
+@import './components/Song/SongSearch/SongSearch.scss';
+@import './components/Song/SongSetting/SongSetting.scss';
+@import './components/Song/SongSearch/SongSearch.scss';
+
+

@@ -1,0 +1,22 @@
+@import '../../common/config.scss';
+
+.official-logo {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    display: flex;
+    padding: 0 12px;
+    img {
+        height: 46px;
+        max-height: 50px;
+        width: auto;
+    }
+    h3 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 550;
+        text-shadow: 0 0 1px #000;
+        line-height: 3rem;
+        padding: 0 0.5rem;
+    }
+}

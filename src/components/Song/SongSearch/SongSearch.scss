@@ -1,0 +1,162 @@
+@import '../../../common/config.scss';
+
+.song-search {
+    height: 100%;
+    @include animation(fadeLeft,ease,1s);
+    display: flex;
+    flex-direction: column;
+    &-body {
+        margin: 0 24px;
+        flex-shrink: 1;
+        flex-direction: column;
+        overflow: auto;
+        overscroll-behavior: contain;
+        scroll-behavior: smooth;
+        justify-content: flex-start;
+        will-change: scroll-position;
+        height: 100%;
+        .song-kind-top {
+            width: 100%;
+            .song-kind-heading {
+                color: var(--text-color);
+                font-size: 22px;
+                font-weight: 700;
+                padding: 10px 0;
+            }
+            .song-kind-top-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 2%;
+                width: 100%;
+                padding: 4px 0;
+            }
+            .song-kind-top-item {
+                position: relative;
+                width: 100%;
+                height: 220px;
+                // margin-right: 2%;
+                border-radius: 10px;
+                cursor: pointer;
+                overflow: hidden;
+                text-decoration: none;
+
+                h4 {
+                    color: var(--text-color);
+                    font-size: 32px;
+                    font-weight: 700;
+                    padding: 24px 16px;
+                }
+            }
+            .song-kind-photo-top {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                -webkit-transform: rotate(25deg) translate(18%,-2%);
+                @include animation(fadeRight,ease,0.5s);
+                width: 30%;
+                height: auto;
+                &.disable {
+                    
+                    display: none;
+                }
+            }
+            .song-kind-photo-theme {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                @include animation(fadeRight,ease,0.8s);
+                display: none;
+                
+                &.active {
+                    transition: 0.8s;
+                    height: 100%;
+                    width: auto;
+                    display: block;
+                }
+            }
+        }
+        .song-kind-body {
+            width: 100%;
+            margin-top: 32px;
+            margin-bottom: 240px;
+            .song-kind-heading {
+                color: var(--text-color);
+                font-size: 22px;
+                font-weight: 700;
+                padding: 10px 0;
+            }
+            .song-kind-body-list {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+                grid-gap: 2%;
+                // margin: 10px 0 40px 0;
+            }
+            .song-kind-body-item {
+                position: relative;
+                height: 210px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                cursor: pointer;
+                overflow: hidden;
+                
+
+                h4 {
+                    color: var(--text-color);
+                    font-size: 21px;
+                    font-weight: 700;
+                    padding: 16px 12px;
+                }
+            }
+            .song-kind-photo-body {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 45%;
+                height: auto;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                -webkit-transform: rotate(25deg) translate(18%,-2%);
+            }
+        }
+    }
+}
+
+.icon-sun {
+    position: absolute;
+    top: -10%;
+    left: 40%;
+    color: yellow;
+    -webkit-text-stroke: 1px;
+
+}
+.icon-cloud {
+    position: absolute;
+    left: 25%;
+    top: 16%;
+    color: var(--text-color);
+    z-index: 1;
+}
+.icon-rain {
+    position: absolute;
+    top: -5%;
+    left: 40%;
+    color: grey;
+    -webkit-text-stroke: 1px;
+
+}
+.icon-moon {
+    font-size: 32px;
+    position: absolute;
+    top: -10%;
+    left: 54%;
+    color: yellow;
+    -webkit-text-stroke: 1px;
+}

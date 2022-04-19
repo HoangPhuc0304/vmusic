@@ -1,0 +1,88 @@
+@import '../../common/config.scss';
+
+.book-list {
+    width: 100%;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+
+    .book-item {
+        position: relative;
+        background-color: $text-color;
+        width: 100%;
+        border-radius: 2px;
+
+        &-photo {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            @include transition-ease;
+
+            &:hover {
+                opacity: 0.9;
+                transform: scale(1.1);
+            }
+        }
+    }
+    .book-text {
+        padding: 0.75rem 0.5rem;
+    }
+    .book-place {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-shadow: 0 0 1px #fff;
+        color: $dark-color;
+    }
+    .book-description {
+        margin-top: 0.5rem;
+        min-height: 80px;
+        line-height: 1.2rem;
+        font-size: $font-text;
+        color: $primary-color;
+        font-weight: 500;
+    }
+    .book-date {
+        font-size: 1rem;
+        font-weight: 550;
+        color: $dark-color;
+    }
+    .book-select {
+        position: relative;
+        @include flex-center-display;
+        justify-content: space-between;
+        font-size: 0.75rem;
+    }
+    .book-btn {
+        margin-top: 0.5rem;
+        padding: 0.5rem 1.5rem;
+        border: none;
+        border-radius: 2px;
+        background-color: $primary-color;
+        color: $text-color;
+        font-weight: 600;
+        cursor: pointer;
+        float: center;
+    }
+    .book-star {
+        font-size: 0.7rem;
+
+        .gold-star {
+            color: #fbbc04;
+            margin: 0 2px;
+            -webkit-text-stroke: 2px;
+        }
+        .no-star {
+            -webkit-text-stroke: 2px;
+            margin: 0 2px;
+            color: rgb(204, 189, 189);
+        }
+    }
+}
+
+

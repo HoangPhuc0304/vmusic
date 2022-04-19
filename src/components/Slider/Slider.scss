@@ -1,0 +1,105 @@
+@import '../../common/config.scss';
+
+#slider {
+    position: relative;
+
+    .slider-container {
+        width: 100%;
+        background-color: var(--primary-color);
+
+        .slider-photo {
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: auto;
+            display: none;
+            transition: 1s;
+            transform-origin: right;
+            
+            &.active {
+                display: block;
+            }
+        }
+        .slider-page {
+            position: absolute;
+            bottom: 5%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            font-size: $font-normal;
+            font-weight: 700;
+            color: var(--text-color);
+            text-shadow: 0 0 4px #000;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+        .slider-frame {
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            margin-left: -233px;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            .slider-btn {
+                width: 15px;
+                height: 15px;
+                background-color: var(--text-color);
+                border-radius: 50%;
+                margin: 0 8px;
+                border: 1px solid #000;
+                cursor: pointer;
+
+                &.active {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+        .slider-change-left {
+            position: absolute;
+            top: 42%;
+            left: 0;
+            padding: 20px 10px;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: rgba(0,0,0,0.8);
+                @include transition-ease;
+            }
+            i {
+                color: var(--text-color);
+                text-shadow: 0 0 10px #000;
+                -webkit-text-stroke: 2px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+        .slider-change-right {
+            position: absolute;
+            top: 42%;
+            right: 0;
+            padding: 20px 10px;
+            border-radius: 3px 0 0 3px;
+            z-index: 1;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(0,0,0,0.8);
+                @include transition-ease;
+            }
+            i {
+                color: var(--text-color);
+                text-shadow: 0 0 10px #000;
+                -webkit-text-stroke: 2px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }   
+}
