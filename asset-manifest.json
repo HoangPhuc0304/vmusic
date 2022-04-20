@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a0da2b2.css",
-    "main.js": "/static/js/main.6bcb539c.js",
-    "static/media/photo_winter.jpg": "/static/media/photo_winter.f15249f60dd135c00a20.jpg",
-    "static/media/header_icon.png": "/static/media/header_icon.50406083bae1eb970a83.png",
-    "index.html": "/index.html",
-    "main.7a0da2b2.css.map": "/static/css/main.7a0da2b2.css.map",
-    "main.6bcb539c.js.map": "/static/js/main.6bcb539c.js.map"
+    "main.css": "/HoangPhuc0304/vmusic/static/css/main.7a0da2b2.css",
+    "main.js": "/HoangPhuc0304/vmusic/static/js/main.18832260.js",
+    "static/media/photo_winter.jpg": "/HoangPhuc0304/vmusic/static/media/photo_winter.f15249f60dd135c00a20.jpg",
+    "static/media/header_icon.png": "/HoangPhuc0304/vmusic/static/media/header_icon.50406083bae1eb970a83.png",
+    "index.html": "/HoangPhuc0304/vmusic/index.html",
+    "main.7a0da2b2.css.map": "/HoangPhuc0304/vmusic/static/css/main.7a0da2b2.css.map",
+    "main.18832260.js.map": "/HoangPhuc0304/vmusic/static/js/main.18832260.js.map"
   },
   "entrypoints": [
     "static/css/main.7a0da2b2.css",
-    "static/js/main.6bcb539c.js"
+    "static/js/main.18832260.js"
   ]
 }
