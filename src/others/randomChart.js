@@ -45,4 +45,32 @@ const randomStatus = (index) => {
     return statusList[Math.floor(Math.random()*statusList.length)]
 }
 
-export  {randomChart,randomStatus}
+const randomTrending = (index) => {
+    const trendingList = [
+    {
+        color: 'green',
+        kind: "trending"
+    },
+    {
+        color: 'orange',
+        kind: "new",
+    },
+    {
+        color: '',
+        kind: "",
+    },
+    ]
+    
+    if (index === 0){
+        return trendingList[0]
+    } 
+    let random = Math.floor(Math.random()*100)
+    if (random <= 5) {
+        return trendingList[0] 
+    } else if (random >5 && random <=20) {
+        return trendingList[1]
+    }
+    return trendingList[2]
+}
+
+export  {randomChart,randomStatus,randomTrending}
