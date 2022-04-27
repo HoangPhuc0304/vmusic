@@ -4,14 +4,12 @@ import { songNavHeaderAPI, songNavBodyAPI } from '../../../fakeAPI/api/SongNavAP
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getNavActive } from '../../../redux/slices/songSlice'
+import OfficialLogo from '../../OfficialLogo/OfficialLogo'
 function SongNav() {
     const activeCurrent = useSelector(getNavActive)
     return (
         <div className="song-nav">
-            <div className="song-logo">
-                <img src={require("../../../common/header_icon.png")} alt="" />
-                <h3>V-Music</h3>
-            </div>
+            <OfficialLogo/>
             <div className="song-nav-header">
                 {songNavHeaderAPI.map((item) => (
                     <Link to={item.link} key={item.id} style={{textDecoration: "none"}}>

@@ -17,13 +17,15 @@ import SongFollow from './components/Song/SongFollow/SongFollow';
 import Song from './components/Song/Song';
 import SelectTheme from './components/SelectTheme/SelectTheme';
 import Control from './components/Control/Control';
+import VideoDetail from './components/pages/MusicVideo/VideoDetail';
 
 
 function App() {
   const handleActiveNav = useSelector(getRequestAccess)
   return (
     <div className="App">
-      <Router>
+      {/* basename='/vmusic' */}
+      <Router basename='/vmusic'> 
         <Header/>
         {handleActiveNav && <><SelectTheme/> <SongNav/> <Control/></>}
         <Routes>
@@ -31,10 +33,11 @@ function App() {
           <Route path="/sign-in" element={<SignIn/>}/>
           <Route path="/sign-up" element={<SignUp/>}/>
           <Route path="/book-singer" element={<BookSinger/>}/>
-          <Route path="/kind-song/:kind" element={<KindSong/>}/>
+          <Route path="/search/:kind" element={<KindSong/>}/>
           <Route path="/search" element={<Song props="search"/>}/>
           <Route path="/chart" element={<Song props="chart"/>}/>
           <Route path="/mv" element={<Song props="mv"/>}/>
+          <Route path="/mv/:link" element={<VideoDetail/>}/>
           <Route path="/follow" element={<Song props="follow"/>}/>
         </Routes>
         <Footer/>

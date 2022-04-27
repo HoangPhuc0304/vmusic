@@ -5,6 +5,7 @@ import songSlice from '../../../redux/slices/songSlice'
 import userSlice, { getRequestAccess } from '../../../redux/slices/userSlice'
 import './SignIn.scss'
 function SignIn() {
+    const acceptAccess = useSelector(getRequestAccess)
     const [emailText,setEmailText] = useState('')
     const [password,setPassword] = useState('')
     const messageEmail = useRef()
@@ -34,10 +35,6 @@ function SignIn() {
                 email: emailText,
                 password: password
             }))
-            setTimeout(() => {
-                closeModal.current.click()
-                console.log(closeModal.current)
-            },1000)
         }
     }
     
@@ -75,6 +72,11 @@ function SignIn() {
             dispatch(songSlice.actions.activeHeaderVirtual(false))
         }
     },[])
+    useEffect(() => {
+        acceptAccess && setTimeout(() => {
+            closeModal.current.click()
+        },300)
+    },[acceptAccess])
 
   return (
     <div className="modal-sign-in" onClick={handleClickModal}>

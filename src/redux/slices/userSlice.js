@@ -2,10 +2,13 @@ import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
     signIn: [
-
+        {
+            email: 'lephuc0304@gmail.com',
+            password: '123456789'
+        }
     ],
     signUp: [
-
+        
     ],
     sendMessage: [
 
@@ -18,8 +21,12 @@ const userSlice = createSlice({
     initialState,
     reducers: {
         handleSignIn: (state,action) => {
-            state.signIn.push(action.payload)
-            state.acceptAccess = true;
+            const checkValid = state.signIn.findIndex((item) => (
+                JSON.stringify(item) === JSON.stringify(action.payload)
+            ))
+            if (checkValid !== -1) {
+                state.acceptAccess = true
+            }            
         },
         handleSignUp: (state,action) => {
             state.signUp.push(action.payload)

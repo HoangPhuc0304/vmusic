@@ -4502,9 +4502,6 @@ html {
 .video-page .video-information-header .video-information-decoration {
   font-size: 1.5rem;
 }
-.video-page .video-information-header .video-information-behavior {
-  min-width: 200px;
-}
 .video-page .video-information-header .video-information-behavior span {
   margin: 0 0.5rem;
 }
@@ -4512,9 +4509,6 @@ html {
   font-size: 1.5rem;
   padding: 0.5rem;
   cursor: pointer;
-}
-.video-page .video-information-header .video-information-behavior span i.active {
-  color: #00a42c;
 }
 .video-page .video-information-channel {
   width: 100%;
@@ -4533,32 +4527,16 @@ html {
   border-radius: 4px;
   margin-right: 1rem;
 }
-.video-page .video-information-channel .video-information-review .video-information-list {
-  list-style-type: none;
-}
-.video-page .video-information-channel .video-information-review .video-information-list .video-information-item {
+.video-page .video-information-channel .video-information-review .video-information-detail span, .video-page .video-information-channel .video-information-review .video-information-detail h3, .video-page .video-information-channel .video-information-review .video-information-detail p {
+  font-size: 1rem;
+  font-weight: 500;
   line-height: 26px;
-  display: flex;
 }
-.video-page .video-information-channel .video-information-review .video-information-list .video-information-item h3 {
-  color: #a9a9ac;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-right: 0.5rem;
-}
-.video-page .video-information-channel .video-information-review .video-information-list .video-information-item span {
-  color: var(--text-color);
-  font-size: 1rem;
-  font-weight: 500;
-  margin-right: 0.5rem;
-}
-.video-page .video-information-channel .video-information-review .video-information-list i {
+.video-page .video-information-channel .video-information-review .video-information-detail i {
   padding: 0 2px;
-  font-size: 1rem;
-  color: var(--text-color);
 }
-.video-page .video-information-channel .video-information-review .video-information-list i.fill, .video-page .video-information-channel .video-information-review .video-information-list i.half {
-  color: #00a42c;
+.video-page .video-information-channel .video-information-review .video-information-detail i:nth-child(1) {
+  margin-left: 0.5rem;
 }
 .video-page .video-information-channel .video-information-subscribe {
   margin: 0 1rem;
@@ -4836,4 +4814,4 @@ html {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */

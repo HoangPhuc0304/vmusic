@@ -1,41 +1,33 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import vPopList from '../../../fakeAPI/api/vpop'
-import { changeTimeFromSecondToString } from '../../../others/features'
-import { randomTrending } from '../../../others/randomChart'
+import { Link } from 'react-router-dom'
 import songSlice from '../../../redux/slices/songSlice'
 import { getMusicVideoList } from '../../../redux/slices/videoSlice'
+import ThumbnailVideo from '../../ThumbnailVideo/ThumbnailVideo'
 import './SongMV.scss'
 
 function SongMV() {
   const listMV = useSelector(getMusicVideoList)
+  console.log(listMV)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(songSlice.actions.changeNavActive(4))
-  },[])
+  }, [])
   return (
     <div className="song-mv">
       <div className="song-mv-box">
         <div className="song-mv-heading">Popular Music Videos in Vietnam</div>
         <div className="song-mv-container">
           <div className="song-mv-list">
-            {listMV.map((item,index) => (
-              <div className="song-mv-item" key={index}>
-                <div className="song-mv-thumbnail">
-                  <img src={item.img} alt={item.song} />
-                  <span className="song-mv-time">{changeTimeFromSecondToString(item.length)}</span>
-                  <p className={`song-mv-highlight ${listMV[index].status.color}`}>{listMV[index].status.kind}</p>
-                  <i className="bi bi-play-circle"></i>
-                </div>
-                <div className="song-mv-body">
-                  <img src={item.avatar} alt={item.name} />
-                  <div className="song-mv-decoration">
-                    <h3>{item.song}</h3>
-                    <p>{item.name}</p>
-                  </div>
-                </div>
-              </div>
-            )) }
+            {listMV.map((item) => (
+              <Link 
+                to={`/mv/${item.id}`}
+                style={{textDecoration: 'none'}}
+                key={item.id}
+              >
+                <ThumbnailVideo content={item}/>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

@@ -1,5 +1,23 @@
 const vPopList =[
     {
+        link: "https://www.youtube.com/watch?v=te9JalT1k5s",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/chart_tnoaa.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/song_tnoaa.jpg",
+        song: "There's no one at all",
+        name: "Son Tung M-TP",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/chungtacuahientai.flac",
+        length: 301
+    },
+    {
+        link: "https://www.youtube.com/watch?v=W4P8gl4dnrg",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/chart_huthv.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/song_huthv.jpg",
+        song: "Hẹn ước từ hư vô",
+        name: "My Tam",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/huthv.flac",
+        length: 247
+    },
+    {
         link: "https://www.youtube.com/watch?v=psZ1g9fMfeo",
         img: "https://hoangphuc0304.github.io/V-Music/assets/image/chart_ctcht.jpg",
         avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/song_ctcht.jpg",
@@ -16,6 +34,33 @@ const vPopList =[
         name: "Mr. Siro",
         audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/ntyllsd.mp3",
         length: 303
+    },
+    {
+        link: "https://www.youtube.com/watch?v=Yw9Ra2UiVLw",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/chart_chimsau.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/song_chimsau.jpg",
+        song: "Chìm sâu",
+        name: "MCK, Trung Quan",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/chimsau.flac",
+        length: 155
+    },
+    {
+        link: "https://www.youtube.com/watch?v=SGlBQR-ftVI",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/chart_dcmvs.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/song_dcmvs.jpg",
+        song: "Dù cho mai về sau",
+        name: "buitruonglinh",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/dcmvs.flac",
+        length: 232
+    },
+    {
+        link: "https://www.youtube.com/watch?v=psZ1g9fMfeo",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/chart_dbmh.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/song_dbmh.jpg",
+        song: "Don't break my heart",
+        name: "Binz, Touliver",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/dbmh.flac",
+        length: 237
     },
     {
         link: "https://www.youtube.com/watch?v=rIXhXaQ8tiM",

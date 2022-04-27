@@ -30,7 +30,7 @@ function SongSearch() {
           <div className="song-kind-top-list">
             {songSearchTop.map((item,index) => (
               <Link 
-                to={`/kind-song/${item.kind}`} 
+                to={`/search/${item.kind}`} 
                 style={{textDecoration: 'none'}}
                 key={item.id}
               >
@@ -54,7 +54,7 @@ function SongSearch() {
           <h3 className="song-kind-heading">Browse all</h3>
           <div className="song-kind-body-list">
             {songSearchList.map((item) => (
-              <Link to={`/kind-song/${item.kind}`} style={{textDecoration: 'none'}} key={item.id}>
+              <Link to={`/search/${item.kind}`} style={{textDecoration: 'none'}} key={item.id}>
                 <div  
                   className="song-kind-body-item"
                   style={{

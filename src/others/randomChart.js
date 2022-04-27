@@ -73,4 +73,9 @@ const randomTrending = (index) => {
     return trendingList[2]
 }
 
-export  {randomChart,randomStatus,randomTrending}
+const randomRating = (min,max) => {
+    const random = Math.random()*(max-min) + min
+    return random.toFixed(1)
+}
+
+export  {randomChart,randomStatus,randomTrending,randomRating}

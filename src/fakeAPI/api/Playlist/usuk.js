@@ -270,6 +270,15 @@ const usukList =[
         length: 185
     },
     {
+        link: "https://www.youtube.com/",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/img_Like_I_am_gonna_lose_you.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/avatar_Like_I_am_gonna_lose_you.jpg",
+        song: "Like I'm gonna lose you",
+        name: "Meghan Trainor, John Legend",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/usuk/Like_I_am_Gonna_Lose_You.mp3",    
+        length: 204
+    },
+    {
         link: "https://www.youtube.com",
         img: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/img_Like_my_father.jpg",
         avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/avatar_Like_my_father.jpg",
@@ -396,6 +405,15 @@ const usukList =[
         length: 229
     },
     {
+        link: "https://www.youtube.com/",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/img_Send_it.jpg",
+        avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/avatar_Send_it.jpg",
+        song: "Send it",
+        name: "Austin Mahone, Rich Homie Quan",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/usuk/Send_it.mp3",    
+        length: 181
+    },
+    {
         link: "https://www.youtube.com",
         img: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/img_Senorita.jpg",
         avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/avatar_Senorita.jpg",
@@ -474,6 +492,15 @@ const usukList =[
         song: "The lazy song",
         name: "Bruno Mars",
         audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/usuk/The_lazy_song.mp3",    
+        length: 195
+    },
+    {
+        link: "https://www.youtube.com/",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/img_There_is_no_one_at_all.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/avatar_There_is_no_one_at_all.jpg",
+        song: "There's no one at all",
+        name: "Son Tung M-TP",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/usuk/There_is_no_one_at_all.flac",    
         length: 195
     },
     {
@@ -556,6 +583,15 @@ const usukList =[
         name: "Enrique Iglesias",
         audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/usuk/Why_not_me.mp3",    
         length: 219
+    },
+    {
+        link: "https://www.youtube.com/",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/img_You_are_not_alone.jpg",
+        avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/usuk/avatar_You_are_not_alone.jpg",
+        song: "You are not alone",
+        name: "Michael Jackson",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/usuk/You_are_not_alone.flac",    
+        length: 345
     },
     {
         link: "https://www.youtube.com",
