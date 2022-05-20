@@ -10,21 +10,21 @@ const cPopList =[
     },
     {
         link: "https://www.youtube.com",
-        img: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/img_ll.jpg",
-        avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_ll.jpg",
-        song: "Lạnh lẽo",
-        name: "Truong Bich Than, Duong Tong Vy",
-        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/lanhleo.flac",    
-        length: 333
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/img_tla.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_tla.jpg",
+        song: "Tôi là ai",
+        name: "Thai Y Lam, Jony J",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/toilaai.mp3",    
+        length: 239
     },
     {
         link: "https://www.youtube.com",
-        img: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/img_bn.jpg",
-        avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_bn.jpg",
-        song: "Bất nhiễm",
-        name: "Mao Bat Dich",
-        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/batnhiem.mp3",    
-        length: 325
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/img_mdl.jpg",
+        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_mdl.jpg",
+        song: "Mặt đối lập",
+        name: "Thai Y Lam",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/matdoilap.mp3",    
+        length: 230
     },
     {
         link: "https://www.youtube.com",
@@ -133,6 +133,24 @@ const cPopList =[
         name: "Vu Nguyet Thien",
         audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/anhkhongmuondeemmotminh.mp3",    
         length: 265
+    },
+    {
+        link: "https://www.youtube.com",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/img_ll.jpg",
+        avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_ll.jpg",
+        song: "Lạnh lẽo",
+        name: "Truong Bich Than, Duong Tong Vy",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/lanhleo.flac",    
+        length: 333
+    },
+    {
+        link: "https://www.youtube.com",
+        img: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/img_bn.jpg",
+        avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_bn.jpg",
+        song: "Bất nhiễm",
+        name: "Mao Bat Dich",
+        audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/batnhiem.mp3",    
+        length: 325
     },
     {
         link: "https://www.youtube.com",
