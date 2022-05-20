@@ -11,7 +11,7 @@ const cPopList =[
     {
         link: "https://www.youtube.com",
         img: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/img_tla.jpg",
-        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_tla.jpg",
+        avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_tla.jpg",
         song: "Tôi là ai",
         name: "Thai Y Lam, Jony J",
         audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/toilaai.mp3",    
@@ -20,7 +20,7 @@ const cPopList =[
     {
         link: "https://www.youtube.com",
         img: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/img_mdl.jpg",
-        avata: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_mdl.jpg",
+        avatar: "https://hoangphuc0304.github.io/V-Music/assets/image/cpop/avata_mdl.jpg",
         song: "Mặt đối lập",
         name: "Thai Y Lam",
         audio: "https://hoangphuc0304.github.io/V-Music/assets/audio/cpop/matdoilap.mp3",    
